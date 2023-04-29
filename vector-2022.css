@@ -1,0 +1,119 @@
+/*
+ * This is custom CSS for Wikipedia skin Vector 2022.
+ *
+ * It uses custom locally created font Iosevka Extended and standard macOS font
+ * SF Pro Display, so change it if you want to use this CSS on your system.
+ * 
+ * Author: Sergey Vartanov (me@enzet.ru).
+ */
+
+p {font-size: 12pt;} /* Increase the main font a little bit. */
+* {line-height: 1.5;} /* Slightly reduce the line height. */
+body {font-family: "SF Pro Display";}
+
+/* Make headers borderless, bold and sans. */
+h2 {border: none;}
+h1, h2 {font-family: "SF Pro Display" !important; font-weight: bold;}
+.vector-sticky-header-context-bar-primary {
+    font-family: "SF Pro Display" !important; font-weight: bold;
+}
+
+/* Change monospaced font and color scheme for source code snippets. */
+pre {border: none; border-radius: 10px; font-family: "Iosevka Custom Extended";}
+code {border: none; font-family: "Iosevka Custom Extended";}
+.c1 {color: #080 !important;} /* Comments. */
+.p {color: grey !important;} /* Symbols. */
+.k, .kd, .kt {color: darkblue !important;} /* Keywords. */
+.nf, .nc {color: #880 !important;}
+.nb {color: darkblue !important;}
+.mi, .s, .sc, .s2 {color: #800 !important;} /* Constants. */
+.se {color: #808 !important;}
+
+.navbox-title {background-color: white !important;}
+.navbox-subgroup .navbox-title, .navbox-group {
+    background-color: #f4f4ec !important;
+}
+.sidebar, .infobox, .side-box, .navbox, .portalbox {
+    border: none !important; border-radius: 10px;
+}
+.infobox, .portalbox {
+    padding: 7pt !important; background-color: #f4f4ec !important;
+}
+.infobox-header, .infobox-subheader, .infobox-header div, .infobox-above {
+    background-color: white !important; border-radius: 5px;
+}
+.ib-country td, .ib-country th {background-color: white;}
+.infobox-image {padding-top: 10px !important; padding-bottom: 10px !important;}
+.infobox tr td {padding-top: 2px; padding-bottom: 2px;}
+.infobox tr th {padding-top: 2px; padding-bottom: 2px;}
+
+.vector-page-titlebar {box-shadow: none;}
+
+.mw-editsection {display: none;}
+div.thumb {border: none !important; background-color: white !important;}
+div.thumbinner {
+    border: none;
+    background-color: white;
+    padding: 0px;
+}
+div.thumbcaption {
+    padding: 0px;
+    padding-top: 10px;
+    color: grey;
+}
+div.gallerytext {color: grey;}
+
+div.thumbinner a img, video, .mv-tmh-play {
+    border: none;
+    border-radius: 10px;
+}
+
+div.thumbimage {border: none;}
+.quotebox {
+    border: none !important;
+    background-color: #EEE !important;
+    border-radius: 10px;
+}
+
+/*
+ * Hide boxes.
+ *
+ * (!) Warning: this will improve readability of articles but hide important
+ * notes on how to improve Wikipedia. Remove `display: none;` to see them.
+ */
+.box-Unreferenced_section, .box-More_citations_needed, 
+.box-More_citations_needed_section, .box-Update, .box-One_source {
+    display: none;
+    border: none !important;
+    border-radius: 10px;
+    color: grey;
+}
+.stub {display: none;}
+
+/*
+ * Clean up tables. 0.5 pixels looks good on Retina displays but may be a mess
+ * on others.
+ */
+.wikitable > tr > th, .wikitable > tr > td, 
+.wikitable > * > tr > th, .wikitable > * > tr > td {
+    border: 0px;
+    border-bottom: 0.5px solid #000;
+    background-color: white;
+    padding: 5pt 7pt;
+}
+.wikitable {border: none; border-top: 0.5px solid #000;}
+
+/* Change colors for table cells (make green a little bit lighter). */
+td.table-success, td.table-yes {
+  background-color: #ceb !important;
+}
+td.table-failure, td.table-no {
+  background-color: #ecc !important;
+}
+
+/* Cleanup categories: remove color and borders, and make in smaller. */
+.catlinks {border: none; padding: 0px; font-size: 75%; background-color: white;}
+
+/* Remove brackets of buttons. E.g. display "show" instead of "[show]". */
+.mw-collapsible-toggle-default::before {content: "";}
+.mw-collapsible-toggle-default::after {content: "";}
